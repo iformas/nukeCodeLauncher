@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "Nuke Launcher",
+  "version": "1.0",
+
+  "description": "Launch nukes with codes",
+  "icons": {
+    "48": "icons/nuke-48.png"
+  },
+
+  "background": {
+         "scripts": [
+             "js/background.js"
+         ]
+ },
+
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ]
+
+
+
+}
