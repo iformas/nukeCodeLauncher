@@ -10,6 +10,6 @@ Supported Sources | requested data:
 - Hentai Fox | "{numeric_code}"
 - Hentai Nexus | "{numeric_code}"
 - Hitomi | "{numeric_code}"
-- Nhentai | {numeric_code}
+- Nhentai | "{numeric_code}"
 - Pururin | "{numeric_code}/{title}"
 - Tsumino | "{numeric_code}/{optional_title}"
