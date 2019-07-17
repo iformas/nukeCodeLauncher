@@ -5,22 +5,12 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-  id: "nhentai",
+  id: "fakku",
   parentId: "nukeLauncher",
-  title: "Nhentai",
+  title: "Fakku!",
   contexts: ["selection"],
   icons: {
-    "32": "/icons/nhentai-32.png"
-  }
-});
-
-browser.contextMenus.create({
-  id: "tsumino",
-  parentId: "nukeLauncher",
-  title: "Tsumino",
-  contexts: ["selection"],
-  icons: {
-    "32": "/icons/tsumino-32.png"
+    "32": "/icons/fakku-32.png"
   }
 });
 
@@ -29,6 +19,29 @@ browser.contextMenus.create({
   parentId: "nukeLauncher",
   title: "Hentai Cafe",
   contexts: ["selection"],
+  icons: {
+    "32": "/icons/hentaicafe-32.png"
+  }
+});
+
+browser.contextMenus.create({
+  id: "hentaifox",
+  parentId: "nukeLauncher",
+  title: "Hentai Fox",
+  contexts: ["selection"],
+  icons: {
+    "32": "/icons/hentaifox-32.png"
+  }
+});
+
+browser.contextMenus.create({
+  id: "hentaiNexus",
+  parentId: "nukeLauncher",
+  title: "Hentai Nexus",
+  contexts: ["selection"],
+  icons: {
+    "32": "/icons/hentainexus-32.png"
+  }
 });
 
 browser.contextMenus.create({
@@ -42,19 +55,32 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-  id: "hentaiNexus",
+  id: "nhentai",
   parentId: "nukeLauncher",
-  title: "Hentai Nexus",
+  title: "Nhentai",
   contexts: ["selection"],
+  icons: {
+    "32": "/icons/nhentai-32.png"
+  }
 });
 
 browser.contextMenus.create({
-  id: "fakku",
+  id: "pururin",
   parentId: "nukeLauncher",
-  title: "Fakku!",
+  title: "Pururin",
   contexts: ["selection"],
   icons: {
-    "32": "/icons/fakku-32.png"
+    "32": "/icons/pururin-32.png"
+  }
+});
+
+browser.contextMenus.create({
+  id: "tsumino",
+  parentId: "nukeLauncher",
+  title: "Tsumino",
+  contexts: ["selection"],
+  icons: {
+    "32": "/icons/tsumino-32.png"
   }
 });
 
@@ -64,31 +90,45 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
     var url
     
     switch (info.menuItemId) {
-      case "nhentai":
-          url = "https://nhentai.net/g/"+selection;
-      break;
-      case "tsumino":
-        url = "https://tsumino.com/book/info/"+selection;               
+      case "fakku":
+          //https://fakku.net/hentai/{title}/
+       url = "https://fakku.net/hentai/"+selection;
       break;
       case "hentaiCafe":
-        url = "https://hentai.cafe/"+selection;               
+          //https://hentai.cafe/{title}/
+          url = "https://hentai.cafe/"+selection;               
+      break;   
+      case "hentaifox":
+          //https://hentaifox.com/gallery/{num_code}/
+          url = "https://hentaifox.com/gallery/"+selection;
+      break;  
+      case "hentaiNexus":
+          //https://hentainexus.com/view/{num_code}/
+            url = "https://hentainexus.com/view/"+selection;
       break;
       case "hitomi":
-          url = "https://hitomi.la/galleries/"+selection;                  
+          //https://hitomi.la/galleries/{num_code}.html
+            url = "https://hitomi.la/galleries/"+selection + ".html";                  
+      break;  
+      case "nhentai":
+        //https://nhentai.net/g/{num_code}/
+          url = "https://nhentai.net/g/"+selection;
       break;
-      case "hentaiNexus":
-          url = "https://hentainexus.com/view/"+selection;
+      case "pururin":
+        //https://pururin.io/gallery/{num_code}/{title}/
+        url = "https://pururin.io/gallery/"+selection;
       break;
-      case "fakku":
-          url = "https://fakku.net/hentai/"+selection;
+      case "tsumino":
+        //https://tsumino.com/book/info/{num_code}/{optional_title}/
+        url = "https://tsumino.com/book/info/"+selection;               
       break;
       default:
       break;
     }
+
     if (url){
       browser.tabs.create({url: url}).then(onCreated, onError);       
     }
-
   });
   
 function onCreated() {

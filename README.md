@@ -1,11 +1,15 @@
 # Nuke Code Launcher
-Firefox extension for nuke launches.
+Nuke Code Launcher allows you to launch your preferred nukes from selected sources.
 
-Select the code and launch your nuke with right click (context menu) from:
+Just select the nuclear code and launch it with right click (context menu)
 
-- Nhentai
-- Tsumino
-- Hentai Cafe
-- Hitomi
-- Hentai Nexus
-- Fakku!
+Supported Sources | requested data:
+
+- Fakku! | "{title}"
+- Hentai Cafe | "{title}"
+- Hentai Fox | "{numeric_code}"
+- Hentai Nexus | "{numeric_code}"
+- Hitomi | "{numeric_code}"
+- Nhentai | {numeric_code}
+- Pururin | "{numeric_code}/{title}"
+- Tsumino | "{numeric_code}/{optional_title}"
