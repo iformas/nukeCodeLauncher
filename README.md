@@ -6,13 +6,15 @@ Just select the nuclear code and launch it with right click (context menu)
 
 ![](res/screenshot.png)
 
-Supported Sources | requested data:
+## Supported Sources
 
-- Fakku! | "{title}"
-- Hentai Cafe | "{title}"
-- Hentai Fox | "{numeric_code}"
-- Hentai Nexus | "{numeric_code}"
-- Hitomi | "{numeric_code}"
-- Nhentai | "{numeric_code}"
-- Pururin | "{numeric_code}/{title}"
-- Tsumino | "{numeric_code}/{optional_title}"
+| Source        | Requested Data                    | 
+| ------------- |-----------------------------------|
+|  Fakku!       | "{title}"                         | 
+|  Hentai Cafe  | "{title}"                         | 
+|  Hentai Fox   | "{numeric_code}"                  | 
+|  Hentai Nexus | "{numeric_code}"                  | 
+|  Hitomi       | "{numeric_code}"                  | 
+|  Nhentai      | "{numeric_code}"                  | 
+|  Pururin      | "{numeric_code}/{title}"          | 
+|  Tsumino      | "{numeric_code}/{optional_title}" |    
