@@ -1,7 +1,10 @@
-# Nuke Code Launcher
-Nuke Code Launcher allows you to launch your preferred nukes from selected sources.
+# Nuke Launcher
+Nuke Launcher  is a [Firefox Extension](https://addons.mozilla.org/es/firefox/addon/nuke-launcher/) that allows you to launch your preferred nukes from selected sources.
 
 Just select the nuclear code and launch it with right click (context menu)
+
+
+![](res/screenshot.png)
 
 Supported Sources | requested data:
 
